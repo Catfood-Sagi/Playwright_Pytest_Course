@@ -1,0 +1,19 @@
+Configurating pytest
+
+pytest --headed                       # For headed run
+pytest --headed --slowmo=500          # To add slow mo
+
+By dedault playwright works with Chrome
+pytest --browser=firefox              # To change browser
+
+To configure modifiers to run everytime, we need to configure a 
+pytest.ini file
+the syntax for ini file is to create a Block [] 
+[pytest]
+to add modifiers/flags we will use the keyword addopts
+
+addopts = 
+
+---------
+
+Test Hook.

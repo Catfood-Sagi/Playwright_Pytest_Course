@@ -1,0 +1,40 @@
+Untill now, we used the Page fixture inside our test cases.
+
+Now we will learn about all the Fixtures our Playwright plugin has available.
+
+Page - function code fixture.
+will be given to each function as a new page object
+
+Yes, we can use a test hook, but that's a different topic
+
+-----------------------
+Functions Scope Fixture
+-----------------------
+1. Page
+2. Broswer Context
+In Playwright, a browser_context represents an isolated browser session, similar to a separate browser window with its own cookies, localStorage, and sessionStorage. Each context simulates a different user — with a unique identity, environment, or permissions. 
+You can create multiple contexts within the same browser instance to run tests in isolation more efficiently, without needing to launch a new browser each time.
+
+----------------------
+Session Scope Fixtures
+----------------------
+Session scope fixture is only created once and provided to all of the test functions repeatedly
+1. playwright
+2. Broswer
+2.1 Browser Type
+2.2 Browser_name
+2.3 Browser_channel
+There is also is_firefoxm is_chromium which will be boolean.
+
+-----------------
+Pytest Decorators
+-----------------
+a better more elegant why to run tests only on specfic browsers for example is using pytest mark options.
+@pytest.mark.skip_browser(<name of browser>)
+the opposite of that is to use
+@pytest.mark.only_browser(<name of browser>)
+
+--------------------
+Browser Launch and Context Arguments)
+
+

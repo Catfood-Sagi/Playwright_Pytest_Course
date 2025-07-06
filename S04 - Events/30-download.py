@@ -17,15 +17,16 @@ with sync_playwright() as playwright:
     # register listener
     page.once("download", on_download)
 
+    # get the download button
     btn = page.get_by_role("link", name="Download free")
 
     # expect download
-    with page.expect_download() as download_info:
+    with page.expect_download() as download_info: # this is a context manager that waits for the download event
         # trigger download
         btn.click()
 
     # Save using download_info
-    # download = download_info.value
-    # download.save_as("moon.jpg")
+       # download = download_info.value  this is the download object
+       # download.save_as("moon.jpg")   saves the file with the specified name
 
     browser.close()

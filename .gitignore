@@ -1,0 +1,25 @@
+# Ignore Python virtual environments
+.venv/
+venv/
+Lib/
+Include/
+Scripts/
+pyvenv.cfg
+
+# Bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Test and coverage output
+htmlcov/
+.coverage
+*.log

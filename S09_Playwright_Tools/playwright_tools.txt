@@ -1,0 +1,35 @@
+------------------
+Taking a Screenshot
+
+After we use the goto navigation, lets say we want to take a screenshot of the page
+we can use
+page.screenshot(path="path where to save the img") - we can use png or jpg
+We can also take a screenshot of a specific element. 
+
+----------------------
+Recording a Video
+
+we will need to import playwright browser
+this require a broswer context.
+we will need to provide arg to record the session
+
+    context = browser.new_context(
+        record_video_dir="video/"
+    )
+
+we are providing a directory 
+
+you can also use it as fixture
+
+-------------------------
+Tracing 
+
+    context.tracing.start(
+        name="playwright", # name of the trace
+        screenshots=True, # we can see screenshots frame by frame
+        snapshots=True,   #
+        sources=True,     # soucre code of each action
+
+helpful tip:
+1. You can run playwright show-trace <file name>
+2. Can also open it from trace.playwright.dev website

@@ -14,4 +14,7 @@ async def main():
         await browser.close()
 
 
-asyncio.run(main())
+asyncio.run(main()) 
+# This will run the main function in an event loop
+# This is an asynchronous version of the Playwright script that launches a browser, navigates to a URL, and prints the page title.
+
