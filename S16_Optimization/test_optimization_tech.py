@@ -7,7 +7,7 @@ By default when we intiating any page navifation, playwright loads every resourc
 '''
 
 import pytest
-from playwright.sync_api import Page, expect, Route
+from playwright.sync_api import Page, expect, Route, Browser
 
 
 @pytest.fixture
